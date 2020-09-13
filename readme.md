@@ -27,7 +27,7 @@
 16. Left panel, click "Clusters"
 17. Click "Connect"
 18. Click "Connect your application"
-19. Copy the url to index.js and replace the string where we have "mongoose.connect('mongodb://localhost:27017/something')", the <password> is what you decided in step 10, the <dbname> you're making it up right now, name it something relevant
+19. Copy the url to index.js in VSCode and replace the string where we have "mongoose.connect('mongodb://localhost:27017/something')", the <password> is what you decided in step 10, the <dbname> you're making it up right now, name it something relevant
 20. Save file then git add, git commit, and git push this change
 
 # Deploying api to heroku
@@ -39,4 +39,5 @@
 5. Search for a repository to connect to, type the repo and click "Search"
 6. Click "Connect"
 7. Click "Enable Automatic Deploys"
-8. Click "Deploy Branch"
+8. Create a file called "Procfile" in VSCode at the top level of your app, type "worker: nodemon index.js"
+9. Save file then git add, git commit, and git push this change
