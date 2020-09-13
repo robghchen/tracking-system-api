@@ -171,6 +171,6 @@ app.route('/api/v1/users/:userId').patch(async function (req, res) {
 	}
 });
 
-app.listen(3001, function () {
+app.listen(process.env.PORT || 3001, function () {
 	console.log('Server started on port 3001.');
 });
