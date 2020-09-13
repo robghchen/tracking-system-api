@@ -39,5 +39,8 @@
 5. Search for a repository to connect to, type the repo and click "Search"
 6. Click "Connect"
 7. Click "Enable Automatic Deploys"
-8. Create a file called "Procfile" in VSCode at the top level of your app, type "worker: nodemon index.js"
+8. Create a file called "Procfile" in VSCode at the top level of your app, type "worker: node index.js"
 9. Save file then git add, git commit, and git push this change
+10. Wait a minute, then click "Resources" tab in heroku
+11. Click the edit icon for "web npm start" and turn that off
+12. Click the edit icon for "worker node index.js" and turn that on
