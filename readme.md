@@ -7,7 +7,7 @@
 5. `yarn start`
 6. write your code
 
-# Creating mongodb cloud database
+# Deploying database to Mongodb Cloud
 
 1. Visit https://cloud.mongodb.com/ and sign up, choose "FREE"
 2. Cloud Provider & Region, choose AWS (default)
@@ -27,10 +27,10 @@
 16. Left panel, click "Clusters"
 17. Click "Connect"
 18. Click "Connect your application"
-19. Copy the url to index.js in VSCode and replace the string where we have "mongoose.connect('mongodb://localhost:27017/something')", the <password> is what you decided in step 10, the <dbname> you're making it up right now, name it something relevant
+19. Copy the url to `index.js` in VSCode and replace the string where we have `mongoose.connect('mongodb://localhost:27017/something')`, the <password> is what you decided in step 10, the <dbname> you're making it up right now, name it something relevant
 20. Save file then git add, git commit, and git push this change
 
-# Deploying api to heroku
+# Deploying api to Heroku
 
 1. Visit https://heroku.com and sign up
 2. Click "New" then "Create new app"
@@ -39,8 +39,10 @@
 5. Search for a repository to connect to, type the repo and click "Search"
 6. Click "Connect"
 7. Click "Enable Automatic Deploys"
-8. In VSCode, change index.js where "app.listen(3001, function () {" to "app.listen(process.env.PORT || 3001, function () {"
-9. Create a file called "Procfile" in VSCode at the top level of your app, type "worker: node index.js"
-10. Save file then git add, git commit, and git push this change
-11. Wait a minute, then click "Resources" tab in heroku
-12. Click the edit icon for "worker node index.js" and turn that on
+8. In VSCode, change `index.js` where `app.listen(3001` to `app.listen(process.env.PORT || 3001`
+9. Save file then git add, git commit, and git push this change
+10. Visit your app i.e. https://tracking-system-api.herokuapp.com/api/v1/users (notice the `/api/v1/`), should see an empty array until you put some data into your database that's hosted on mongodb. If you see "Application error" that's not good. Repeat the steps or ask for help.
+
+# Deploying frontend to Netlify
+
+While you can deploy your frontend to Heroku, I strongly recommend Netlify to work around Heroku's free 1000 hour / month limit. Visit https://github.com/robghchen/tracking-system for instructions.
