@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-mongoose.connect('mongodb+srv://admin:test@cluster0.rf7yp.mongodb.net/jobs?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_CONN_STRING, {
 	useNewUrlParser: true,
 	useFindAndModify: false,
 	useUnifiedTopology: true,
